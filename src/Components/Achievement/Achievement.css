@@ -1,0 +1,356 @@
+/* Container styling */
+.achievement-container {
+  background-color: #161513;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Heading styling */
+.achievement-header {
+  position: relative;
+  padding: 40px;
+}
+
+.achievement-heading {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 30px;
+  font-weight: bold;
+  z-index: 1;
+  position: relative;
+}
+
+.theme-pattern {
+  width: 300px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 57%;
+  transform: translate(-50%, -50%);
+}
+
+.theme-pattern:hover {
+  transform: scale(1.1) translate(-50%, -50%);
+}
+
+/* Marquee container */
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Marquee animation */
+.marquee {
+  display: flex;
+  animation: scroll-left 25s linear infinite;
+  gap: 30px;
+}
+
+/* Image container styling */
+.image-container {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* Image styling */
+.scroll-image {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.scroll-image:hover {
+  transform: scale(1.1);
+}
+
+/* Date styling below image */
+.achievement-date {
+  font-size: 1rem;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+/* Marquee animation keyframes */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Friends Section */
+.friends-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.friends-heading {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.friends-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.friend-card {
+  text-align: center;
+  max-width: 150px;
+}
+
+.friend-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.friend-name {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Memories Section */
+.memories {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.memories-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.memories-link p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #007bff;
+  margin-right: 8px;
+  transition: color 0.3s ease;
+}
+
+.memories-link img {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.memories-link:hover p {
+  color: #0056b3;
+}
+
+.memories-link:hover img {
+  transform: translateX(5px);
+}
+
+/* Certificate Section */
+.certificate-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.certificate {
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+}
+
+.certificate-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.certificate-container::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+
+.certificate-container::-webkit-scrollbar-track {
+  background: #ddd;
+}
+
+/* Responsive Design */
+
+/* Small screens (Mobile phones) */
+@media (max-width: 600px) {
+  .achievement-heading {
+    font-size: 1.8rem;
+  }
+
+  .marquee {
+    flex-direction: column;
+    gap: 20px;
+    animation: scroll-left 20s linear infinite;
+  }
+
+  .scroll-image {
+    width: 150px;
+  }
+
+  .achievement-date {
+    font-size: 0.9rem;
+  }
+
+  .friends-heading {
+    font-size: 1.2rem;
+  }
+
+  .friend-card {
+    max-width: 120px;
+  }
+
+  .friend-name {
+    font-size: 0.9rem;
+  }
+
+  .memories-link p {
+    font-size: 14px;
+  }
+
+  .memories-link img {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* Ensure horizontal scrolling for certificates */
+  .certificate-container {
+    overflow-x: scroll;
+  }
+
+  .certificate {
+    width: 90%;
+  }
+}
+
+/* Medium screens (Tablets and Small Laptops) */
+@media (max-width: 768px) {
+  .achievement-heading {
+    font-size: 2rem;
+  }
+
+  .marquee {
+    gap: 25px;
+  }
+
+  .scroll-image {
+    width: 180px;
+  }
+
+  .friends-container {
+    gap: 1.2rem;
+  }
+
+  .friend-card {
+    max-width: 130px;
+  }
+
+  .friend-name {
+    font-size: 1rem;
+  }
+
+  .memories-link p {
+    font-size: 15px;
+  }
+
+  .memories-link img {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+/* Large screens (Laptops, Desktops) */
+@media (min-width: 1024px) {
+  .achievement-heading {
+    font-size: 2.5rem;
+  }
+
+  .scroll-image {
+    width: 200px;
+  }
+
+  .friends-container {
+    gap: 1.5rem;
+  }
+
+  .friend-card {
+    max-width: 150px;
+  }
+
+  .friend-name {
+    font-size: 1rem;
+  }
+
+  .memories-link p {
+    font-size: 16px;
+  }
+
+  .memories-link img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Extra large screens (Large Desktops) */
+@media (min-width: 1200px) {
+  .achievement-heading {
+    font-size: 3rem;
+  }
+
+  .marquee {
+    gap: 30px;
+  }
+
+  .scroll-image {
+    width: 220px;
+  }
+
+  .friends-container {
+    gap: 2rem;
+  }
+
+  .friend-card {
+    max-width: 180px;
+  }
+
+  .friend-name {
+    font-size: 1.1rem;
+  }
+
+  .memories-link p {
+    font-size: 18px;
+  }
+
+  .memories-link img {
+    width: 18px;
+    height: 18px;
+  }
+}

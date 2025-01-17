@@ -1,0 +1,118 @@
+.services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 70px 10%;
+}
+
+.services-title{
+    position: relative;
+}
+
+.services-title h1{
+    padding: 0px 30px;
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.services-title img{
+    width: 160px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.services-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+.service-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid white;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.service-card h3{
+    font-size: 22px;
+    font-weight: 600;
+}
+.service-card h2{
+    font-size: 30px;
+    font-weight: 800;
+    background-image: radial-gradient( circle farthest-corner at 12.9% 20.3%,  rgba(255,162,104,1) 0%, rgba(254,80,147,1) 41% );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.service-card p{
+    color: #d4d4d4;
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 300px;
+}
+
+.readmore {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.readmore img{
+    width: 20px;
+}
+
+
+.service-card:hover{
+    border: 2px solid rgba(254,80,147,1);
+    background: #642B73;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #C6426E, #642B73);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #C6426E, #642B73); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+    .services {
+      align-items: start;
+      gap: 70px;
+      margin: 20px 6%;
+    }
+    .services-title h1{
+        padding: 0;
+        font-size: 40px;
+    }
+    .services-title img{
+        width: 100px;
+        right: -40px;
+    }
+    .service-card {
+        align-items: center;
+        gap: 10px;
+        padding: 20px;
+    }
+    .service-card h2 {
+      font-size: 20px;
+    }
+    .service-card p {
+      font-size: 16px;
+      line-height: 26px;
+      max-width: 300px;
+    }
+    .services-container {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+  }
